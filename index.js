@@ -5,6 +5,7 @@ const app = express()
 const { initializeConnection } = require("./db/db.connect");
 const Recipe = require("./models/recipe.models");
 
+app.use(cors())
 app.use(express.json())
 
 initializeConnection();
